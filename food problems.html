@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodCare - Smart Food Solution</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                Food<span>Care</span>
+            </a>
+
+            <nav class="navbar" id="navbar">
+
+                <a href="index.html">Home</a>
+                <a href="food problems.html">Food Problems</a>
+                <a href="solution.html">Solutions</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= PROBLEMS ================= -->
+
+    <section class="problems section" id="problems">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>COMMON PROBLEMS</span>
+
+                <h2>Food Problems We Can Help With</h2>
+
+                <p>
+                    Explore common food-related problems and discover
+                    simple ways to manage them.
+                </p>
+
+            </div>
+
+
+            <div class="problem-grid" id="problemGrid">
+
+
+                <!-- CARD 1 -->
+
+                <div class="problem-card" data-name="acidity">
+
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+
+                    <h3>Acidity</h3>
+
+                    <p>
+                        Learn healthy eating habits that may help
+                        reduce common acidity problems.
+                    </p>
+
+                    <button class="learn-btn" onclick="showSolution('Acidity')">
+
+                        View Solution
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- CARD 2 -->
+
+                <div class="problem-card" data-name="food poisoning">
+
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-virus"></i>
+                    </div>
+
+                    <h3>Food Poisoning</h3>
+
+                    <p>
+                        Understand basic food safety and what to
+                        do when food causes illness.
+                    </p>
+
+                    <button class="learn-btn" onclick="showSolution('Food Poisoning')">
+
+                        View Solution
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- CARD 3 -->
+
+                <div class="problem-card" data-name="overeating">
+
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+
+                    <h3>Overeating</h3>
+
+                    <p>
+                        Simple strategies to develop healthier
+                        eating portions and habits.
+                    </p>
+
+                    <button class="learn-btn" onclick="showSolution('Overeating')">
+
+                        View Solution
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- CARD 4 -->
+
+                <div class="problem-card" data-name="dehydration">
+
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+                    <h3>Dehydration</h3>
+
+                    <p>
+                        Learn why hydration matters and how to
+                        maintain healthy fluid intake.
+                    </p>
+
+                    <button class="learn-btn" onclick="showSolution('Dehydration')">
+
+                        View Solution
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- CARD 5 -->
+
+                <div class="problem-card" data-name="junk food">
+
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-burger"></i>
+                    </div>
+
+                    <h3>Junk Food</h3>
+
+                    <p>
+                        Discover practical ways to reduce excessive
+                        consumption of unhealthy foods.
+                    </p>
+
+                    <button class="learn-btn" onclick="showSolution('Junk Food')">
+
+                        View Solution
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- CARD 6 -->
+
+                <div class="problem-card" data-name="indigestion">
+
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+
+                    <h3>Indigestion</h3>
+
+                    <p>
+                        Improve your daily food habits for better
+                        digestion and comfort.
+                    </p>
+
+                    <button class="learn-btn" onclick="showSolution('Indigestion')">
+
+                        View Solution
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <p class="no-result" id="noResult">
+                No food problem found. Please try another search.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SOLUTIONS ================= -->
+
+    <section class="solutions section" id="solutions">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>SMART SOLUTIONS</span>
+
+                <h2>Simple Ways To Eat Better</h2>
+
+                <p>
+                    Small changes in your daily food habits can make
+                    a meaningful difference.
+                </p>
+
+            </div>
+
+
+            <div class="solution-grid">
+
+
+                <div class="solution-card">
+
+                    <div class="solution-number">01</div>
+
+                    <i class="fa-solid fa-glass-water"></i>
+
+                    <h3>Stay Hydrated</h3>
+
+                    <p>
+                        Drink enough water throughout the day and
+                        pay attention to signs of dehydration.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <div class="solution-number">02</div>
+
+                    <i class="fa-solid fa-carrot"></i>
+
+                    <h3>Eat Balanced Meals</h3>
+
+                    <p>
+                        Include a variety of vegetables, fruits,
+                        proteins and whole foods in your meals.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <div class="solution-number">03</div>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h3>Eat On Time</h3>
+
+                    <p>
+                        Maintain regular meal times and avoid
+                        unnecessary long gaps between meals.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-card">
+
+                    <div class="solution-number">04</div>
+
+                    <i class="fa-solid fa-person-walking"></i>
+
+                    <h3>Stay Active</h3>
+
+                    <p>
+                        Regular physical activity supports overall
+                        health and healthy lifestyle habits.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about section" id="about">
+
+        <div class="container about-container">
+
+
+            <!-- ABOUT FOOD IMAGE -->
+
+            <div class="about-image">
+
+                <div class="about-image-box">
+
+                    <img src="img/aa-2.jpg" alt="Healthy Fruits and Vegetables" class="about-food-img">
+
+                </div>
+
+
+                <!-- Small Floating Badge -->
+
+                <div class="about-badge">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <div>
+                        <strong>Healthy Choice</strong>
+                        <small>Better Lifestyle</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ABOUT TEXT -->
+
+            <div class="about-text">
+
+                <span>ABOUT FOODCARE</span>
+
+                <h2>
+                    Your Simple Guide To
+                    <strong>Better Food Habits</strong>
+                </h2>
+
+                <p>
+                    FoodCare is designed to provide easy-to-understand
+                    information about common food problems and healthy
+                    lifestyle habits.
+                </p>
+
+
+                <div class="check-list">
+
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        Easy-to-understand information
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        Practical daily food tips
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        Clean and simple interface
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        Mobile-friendly design
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div class="container cta-content">
+
+            <div>
+
+                <span>START TODAY</span>
+
+                <h2>
+                    Take Care Of Your Food,
+                    Take Care Of Yourself.
+                </h2>
+
+            </div>
+
+            <a href="#problems" class="btn white-btn">
+
+                Explore Solutions
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact section" id="contact">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>CONTACT US</span>
+
+                <h2>Have A Question?</h2>
+
+                <p>
+                    Send us a message and we will get back to you.
+                </p>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-row">
+
+
+                    <div class="input-group">
+
+                        <label>Your Name</label>
+
+                        <input type="text" id="name" placeholder="Enter your name" required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Email Address</label>
+
+                        <input type="email" id="email" placeholder="Enter your email" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Your Message</label>
+
+                    <textarea id="message" rows="6" placeholder="Write your message..." required></textarea>
+
+                </div>
+
+
+                <button type="submit" class="btn primary-btn">
+
+                    Send Message
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+
+                    <i class="fa-solid fa-leaf"></i>
+                    Food<span>Care</span>
+
+                </a>
+
+                <p>
+                    Smart food information for a healthier lifestyle.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <a href="#home">Home</a>
+                <a href="#problems">Problems</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#about">About</a>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © <span id="year"></span> FoodCare. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div class="modal" id="solutionModal">
+
+        <div class="modal-content">
+
+            <button class="close-modal" id="closeModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+
+            <h2 id="modalTitle">
+                Food Solution
+            </h2>
+
+
+            <p id="modalText"></p>
+
+
+            <button class="btn primary-btn" id="modalOk">
+
+                Got It
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
